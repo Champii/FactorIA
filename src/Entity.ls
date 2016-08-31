@@ -6,27 +6,24 @@ _Entity = (name, schema) ->
 
   Model = thinky.createModel name, schema
 
-  proxyHandler =
-    get: (target, key) ->
-    set: (target, key, value) ->
-      target.save!
-      true
-
   class Entity
 
     ->
       @model = new Model it
 
     @create = ->
-      entity = new Entity it
-
-      Promise.resolve new Proxy entity, proxyHandler
+      Promise.resolve new Entity it
 
     @fetch = ->
       Model.filter it || {}
 
     save: ->
-      @model.save!
+      @model.save!then ~> @
+
+    set: ->
+      @ <<< it
+      @model <<< it
+      @save!
 
 _Entity <<<< thinky.type
 module.exports = _Entity
