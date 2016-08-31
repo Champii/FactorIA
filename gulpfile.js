@@ -8,8 +8,9 @@ runSequence     = require('run-sequence');
 var paths = {
   ls: './src/**/*.ls',
   build: './build',
+  server: './build/index.js',
   js: ['!./build/node_modules', './build/**/*.js'],
-  jsdoc: './docs/gen'
+  jsdoc: './docs/gen',
 };
 
 gulp.task('doc', ['ls'], function () {
@@ -40,6 +41,18 @@ gulp.task('watch', function () {
   gulp.watch(paths.ls, ['doc']);
 });
 
+gulp.task('nodemon', function (cb) {
+  var started = false;
+  return nodemon({
+    script: paths.server
+    }).on('start', function () {
+    if (!started) {
+      cb();
+      started = true;
+    }
+  });
+});
+
 gulp.task('default', function () {
-  runSequence('watch', 'open-doc');
+  runSequence('watch', 'open-doc', 'nodemon');
 });
