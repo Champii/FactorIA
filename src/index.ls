@@ -8,6 +8,7 @@ require! {
 class FactorIA
 
   ->
+
     @app = express!
     @server = http.Server @app
     @io = socket @server

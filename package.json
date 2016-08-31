@@ -16,16 +16,13 @@
     "url": "https://github.com/Champii/FatorIA/issues"
   },
   "homepage": "https://github.com/Champii/FatorIA#readme",
-  "dependencies": {
-    "bluebird": "^3.4.5",
-    "express": "^4.14.0",
-    "socket.io": "^1.4.8",
-    "thinky": "^2.3.6"
-  },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-jsdoc3": "^0.3.0",
     "gulp-livescript": "^3.0.1",
     "gulp-nodemon": "^2.1.0",
-    "livescript": "^1.5.0"
+    "gulp-server-livereload": "^1.8.2",
+    "livescript": "^1.5.0",
+    "run-sequence": "^1.2.2"
   }
 }
