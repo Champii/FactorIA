@@ -24,8 +24,11 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-jsdoc3": "^0.3.0",
     "gulp-livescript": "^3.0.1",
     "gulp-nodemon": "^2.1.0",
-    "livescript": "^1.5.0"
+    "gulp-server-livereload": "^1.8.2",
+    "livescript": "^1.5.0",
+    "run-sequence": "^1.2.2"
   }
 }
