@@ -1,28 +1,22 @@
 require! {
+  http
   express
   \socket.io : socket
-  thinky     : _thinky
+  \./Player
 }
-
-thinky = _thinky!
-type = thinky.type
 
 class FactorIA
 
   ->
-    @server = http.Server app
+    @app = express!
+    @server = http.Server @app
 
     @io = socket @server
 
-    Post = thinky.createModel \Post do
-      id: type.string!
-      title: type.string!
-
-    post = new Post do
-      title: "Hello World!",
-
-    post
-      .saveAll!
+    Player
+      .create login: \tontonTest2
+      .then -> it.login = 'whesh'
+      .then -> Player.fetch login: \tontonTest2
       .then console.log
 
 module.exports = FactorIA
