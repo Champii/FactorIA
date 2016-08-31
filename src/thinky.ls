@@ -1,3 +1,7 @@
+/** The Thinky module.
+ * @module Thinky
+ */
+
 require! {
   thinky
 }

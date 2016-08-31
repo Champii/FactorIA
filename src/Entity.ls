@@ -2,6 +2,13 @@ require! {
   \./thinky
 }
 
+/**
+ * Represents a Entity class.
+ * @constructor Entity
+ * @param {string} name - The entity's name.
+ * @param {string} schema - The entity's schema.
+ */
+
 _Entity = (name, schema) ->
 
   Model = thinky.createModel name, schema

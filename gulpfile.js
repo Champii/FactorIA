@@ -9,8 +9,9 @@ var paths = {
   ls: './src/**/*.ls',
   build: './build',
   server: './build/index.js',
-  js: ['!./build/node_modules', './build/**/*.js'],
+  js: ['!./build/node_modules/**/*.js', './build/**/*.js'],
   jsdoc: './docs/gen',
+  jsdocConfig: './jsdoc.json'
 };
 
 gulp.task('doc', ['ls'], function () {
