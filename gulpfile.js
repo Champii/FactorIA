@@ -9,7 +9,7 @@ var paths = {
   ls: './src/**/*.ls',
   build: './build',
   server: './build/index.js',
-  js: ['!./build/node_modules/**/*.js', './build/**/*.js'],
+  js: ['./build/**/*.js'],
   jsdoc: './docs/gen',
   jsdocConfig: './jsdoc.json'
 };

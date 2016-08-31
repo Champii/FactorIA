@@ -38,6 +38,6 @@ jspm_packages
 
 /docs
 
-/build/*
-!/build/package.json
+/build
+
 rethinkdb_data
