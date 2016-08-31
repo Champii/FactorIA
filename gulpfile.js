@@ -8,7 +8,7 @@ runSequence     = require('run-sequence');
 var paths = {
   ls: './src/**/*.ls',
   build: './build',
-  server: './build/index.js',
+  server: './build/server/index.js',
   js: ['./build/**/*.js'],
   jsdoc: './docs/gen',
   jsdocConfig: './jsdoc.json'
