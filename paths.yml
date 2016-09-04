@@ -1,0 +1,16 @@
+src: ./src
+build: ./build
+spec: ./spec
+client: /client
+server: /server
+karma:
+  unit: /conf/karma/karma-unit.conf.js
+  dir: ./spec
+  src: /src
+others:
+  jsdoc:
+    dir: ./docs/gen
+    config: ./jsdoc.json
+
+
+

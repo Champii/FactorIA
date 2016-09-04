@@ -39,5 +39,9 @@ jspm_packages
 /docs
 
 /build
+/spec/client
+/spec
 
 rethinkdb_data
+
+/spec/src/*
